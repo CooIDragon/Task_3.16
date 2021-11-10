@@ -13,7 +13,7 @@ public class Main {
             double x = readVar("Input X = ");
             double y = readVar("Input Y = ");
 
-            if (testVar(x) && testVar(y)) {
+            if (isVarInRange(x) && isVarInRange(y)) {
                 printColorForPoint(x, y);
             } else {
                 System.out.println("Error, -10 < x, y < 10");
@@ -34,7 +34,7 @@ public class Main {
         return sc.nextDouble();
     }
 
-    private static boolean testVar(double k) {
+    private static boolean isVarInRange(double k) {
         return k >= -10 && k <= 10;
     }
 }
